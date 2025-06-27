@@ -1,0 +1,41 @@
+// src/components/CoreServices.tsx
+const services = [
+  {
+    title: "GPU as a Service",
+    description: "Access dedicated high-performance GPUs on demand for your training and inference workloads. Scale your infrastructure efficiently.",
+    button: "Learn More",
+    color: "blue"
+  },
+  {
+    title: "Inferencing as a Service",
+    description: "Deploy your most tuned AI models for real-time inference on low-latency, scalable backends. Focus on your applications, not infrastructure.",
+    button: "Learn More",
+    color: "green"
+  },
+  {
+    title: "Industry Solutions",
+    description: "Tailored AI solutions for verticals across sectors, including healthcare, finance, and manufacturing, with built-in compliance and performance.",
+    button: "Learn More",
+    color: "yellow"
+  }
+];
+
+export default function CoreServices() {
+  return (
+    <section className="py-16 px-6 text-center">
+      <h2 className="text-3xl font-bold mb-10">Our Core AI Services</h2>
+      <div className="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto">
+        {services.map((svc, idx) => (
+          <div
+            key={idx}
+            className="bg-white border rounded-xl shadow-sm p-6 hover:shadow-md transition"
+          >
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">{svc.title}</h3>
+            <p className="text-sm text-gray-600 mb-4">{svc.description}</p>
+            <button className={`text-white bg-${svc.color}-600 hover:bg-${svc.color}-700 font-semibold py-2 px-4 rounded`}>{svc.button}</button>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}

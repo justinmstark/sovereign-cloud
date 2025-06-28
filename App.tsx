@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Solutions from './pages/Solutions';
 import Products from './pages/Products';
 import Compliance from './pages/Compliance';
+import ServiceDetail from './pages/ServiceDetail';
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <Route path="/solutions" element={<Layout><Solutions /></Layout>} />
         <Route path="/products" element={<Layout><Products /></Layout>} />
         <Route path="/compliance" element={<Layout><Compliance /></Layout>} />
+        <Route path="/services/:id" element={<Layout><ServiceDetail /></Layout>} />
       </Routes>
     </Router>
   );

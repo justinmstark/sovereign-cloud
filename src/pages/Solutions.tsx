@@ -9,7 +9,7 @@ export default function Solutions() {
 
   const solutionGroups = [
     {
-      title: "Industry-Specific Agents",
+      title: "Industry-Specific Services",
       items: [
         "B2B Marketing",
         "Hyper-personalization for Beauty",

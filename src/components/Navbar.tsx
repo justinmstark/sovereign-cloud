@@ -7,12 +7,15 @@ export default function Navbar() {
     { label: 'Home', path: '/' },
     { label: 'Sovereign Industry Solutions', path: '/solutions' },
     { label: 'Products', path: '/products' },
-    { label: 'Compliance Services', path: '/compliance' }
+    { label: 'Compliance Services', path: '/compliance' },
+    { label: 'Industries', path: '/industries' } // ✅ new item
   ];
 
   return (
     <nav className="bg-white shadow-md py-4 px-6 flex justify-between items-center">
-      <div className="text-2xl font-bold text-gray-800">Sovereign AI</div>
+      <Link to="/" className="flex items-center space-x-2">
+        <img src="/src/assets/telus-digital-logo.png" alt="Sovereign AI" className="h-8 w-auto" />
+      </Link>
       <div className="space-x-3 flex flex-wrap justify-end">
         {navItems.map((item) => (
           <Link

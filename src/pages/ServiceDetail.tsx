@@ -1,5 +1,6 @@
 // src/pages/ServiceDetail.tsx
 import { useParams, Link } from 'react-router-dom';
+import backgroundImage from '../assets/hero_tech_landscape.jpg';
 
 const serviceDetails: Record<string, { title: string; summary: string; description: string; costModel: string }> = {
   gpu: {
@@ -71,32 +72,45 @@ export default function ServiceDetail() {
   }
 
   return (
-    <section className="py-16 px-6 bg-white">
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 items-start">
-        <div>
-          <h1 className="text-4xl font-bold text-brand-dark mb-4 font-sans">{service.title}</h1>
-          <p className="text-brand-gray text-lg mb-4 font-sans">{service.summary}</p>
-          <p className="text-sm text-brand-gray mb-6 font-sans">{service.description}</p>
-          <a
-            href="#order"
-            className="bg-brand-accent hover:bg-brand-accentDark text-white font-semibold py-2 px-4 rounded"
-          >
-            Order This Service
-          </a>
-        </div>
-        <div className="bg-brand-light p-6 rounded-xl shadow-card">
-          <h2 className="text-xl font-semibold text-brand-purple mb-2">What it is</h2>
-          <p className="text-sm text-brand-gray mb-4 font-sans">{service.description}</p>
+    <section
+      className="py-16 px-6 bg-cover bg-no-repeat bg-center"
+      style={{ backgroundImage: `url(${backgroundImage})` }}
+    >
+      <div className="max-w-7xl mx-auto">
+        <nav className="text-sm text-gray-600 mb-4">
+          <Link to="/?tab=services" className="hover:underline text-brand-purple">Services</Link>
+          {id && service?.title && (
+            <>
+              <span className="mx-2">&gt;</span>
+              <span className="text-gray-800 font-medium">{service.title}</span>
+            </>
+          )}
+        </nav>
 
-          <h2 className="text-xl font-semibold text-brand-purple mb-2">Cost Model</h2>
-          <p className="text-sm text-brand-gray mb-4 font-sans">{service.costModel}</p>
-
-          <a
-            href="#order"
-            className="inline-block mt-4 bg-brand-accent hover:bg-brand-accentDark text-white font-semibold py-2 px-4 rounded"
-          >
-            Start Order
-          </a>
+        <div className="bg-white bg-opacity-90 grid lg:grid-cols-2 gap-10 items-center rounded-xl p-8">
+          <div>
+            <span className="uppercase text-brand-purple text-sm font-bold tracking-wide">Services</span>
+            <h1 className="text-5xl font-light leading-tight text-brand-dark mb-6 mt-2">{service.title}</h1>
+            <p className="text-lg text-brand-gray mb-6 font-sans">{service.description}</p>
+            <Link
+              to={id === 'gpu' ? '/services/gpu/order' : '#order'}
+              className="animate-bounce inline-block bg-brand-accent hover:bg-brand-accentDark text-white font-semibold py-3 px-6 rounded transition"
+            >
+              Let’s talk
+            </Link>
+          </div>
+          <div>
+            <div className="bg-white p-6 rounded-xl shadow-card">
+              <h2 className="text-xl font-semibold text-brand-purple mb-2">Cost Model</h2>
+              <p className="text-sm text-brand-gray mb-4 font-sans">{service.costModel}</p>
+              <Link
+                to={id === 'gpu' ? '/services/gpu/order' : '#order'}
+                className="inline-block mt-4 bg-brand-accent hover:bg-brand-accentDark text-white font-semibold py-2 px-4 rounded"
+              >
+                Start Order
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </section>

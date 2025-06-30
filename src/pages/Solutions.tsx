@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import Breadcrumb from '../components/Breadcrumb';
 
 export default function Solutions() {
   const [activeGroup, setActiveGroup] = useState<string | null>(null);
@@ -90,7 +92,15 @@ export default function Solutions() {
   ];
 
   return (
-    <div className="px-6 py-12 max-w-7xl mx-auto">
+    <div className="px-6 pt-32 pb-12 max-w-7xl mx-auto">
+<Breadcrumb
+  segments={[
+    { label: 'Services', path: '/services' },
+    { label: 'Industry Solutions' }
+  ]}
+/>
+      
+
       <h1 className="text-4xl font-bold text-purple-700 mb-8 text-center">
         Live Agentic Jumpstarters and Existing Pipeline
       </h1>

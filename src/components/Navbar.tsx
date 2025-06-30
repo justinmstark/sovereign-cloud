@@ -1,4 +1,3 @@
-// src/components/Navbar.tsx
 import { Link, useLocation } from 'react-router-dom';
 
 export default function Navbar() {
@@ -6,8 +5,8 @@ export default function Navbar() {
 
   const navItems = [
     { label: 'Home', path: '/' },
-    { label: 'Sovereign Industry Solutions', path: '/solutions' },
     { label: 'Industries', path: '/industries' },
+ // { label: 'Sovereign Industry Solutions', path: '/solutions' },
     { label: 'Contact Us', path: '/contact' },
     { label: 'Open Account', path: '/open-account' },
     { label: 'Login', path: '/login' }
@@ -15,9 +14,13 @@ export default function Navbar() {
 
   return (
     <div className="w-full bg-white shadow-md fixed top-0 z-30">
-      <nav className="max-w-7xl mx-auto flex justify-between items-center h-16 px-6">
-        <Link to="/" className="flex items-center space-x-2 min-w-[200px]">
-          <img src="/src/assets/telus-digital-logo.png" alt="Sovereign AI" className="h-8 w-auto" />
+      <nav className="w-full flex justify-between items-center h-16 px-6">
+        <Link to="/" className="flex items-center space-x-2">
+          <img
+            src="/src/assets/telus-digital-logo.png"
+            alt="Sovereign AI"
+            className="h-8 w-auto object-contain"
+          />
         </Link>
         <div className="flex flex-wrap justify-end gap-2">
           {navItems.map((item) => (

@@ -1,4 +1,3 @@
-// src/pages/TabbedHomepage.tsx
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
@@ -27,6 +26,8 @@ export default function TabbedHomepage() {
   return (
     <Layout>
       <div className="w-full min-h-screen px-4 py-6 pt-24 max-w-7xl mx-auto">
+        
+        {/* Tabs always at top */}
         <div className="flex flex-wrap gap-3 justify-center mb-8">
           {tabs.map(tab =>
             tab.label === 'Services' ? (
@@ -50,7 +51,9 @@ export default function TabbedHomepage() {
             )
           )}
         </div>
-        <div>{currentTab}</div>
+
+        {/* Tab content */}
+        {activeTab === 'Overview' ? <Hero /> : currentTab}
       </div>
     </Layout>
   );

@@ -27,7 +27,7 @@ const features = [
 
 export default function WhySovereign() {
   return (
-    <section className="py-20 px-6 bg-white">
+    <section className="py-1 px-6 bg-white">
       <h2 className="text-3xl font-bold text-center mb-12">Why Choose Sovereign AI?</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {features.map((f, idx) => {

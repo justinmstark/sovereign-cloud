@@ -1,7 +1,7 @@
 // src/pages/OpenAccount.tsx
 export default function OpenAccount() {
   return (
-    <section className="bg-gray-100 py-20 px-6">
+    <section className="bg-gray-100 py-20 px-6 mt-32">
       <div className="max-w-xl mx-auto bg-white rounded-xl shadow-card p-8">
         <h1 className="text-2xl font-bold text-center text-brand-dark mb-6">Open a New Account</h1>
         <form className="space-y-6">

@@ -1,7 +1,7 @@
 // src/pages/Contact.tsx
 export default function Contact() {
   return (
-    <section className="bg-gray-100 py-20 px-6">
+    <section className="bg-gray-100 py-20 px-6 mt-32">
       <div className="max-w-4xl mx-auto text-center">
         <h1 className="text-4xl font-bold text-brand-dark mb-4">Let’s connect</h1>
         <p className="text-brand-gray text-lg mb-10">

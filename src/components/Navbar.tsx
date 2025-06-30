@@ -1,3 +1,4 @@
+// src/components/Navbar.tsx
 import { Link, useLocation } from 'react-router-dom';
 
 export default function Navbar() {
@@ -6,30 +7,34 @@ export default function Navbar() {
   const navItems = [
     { label: 'Home', path: '/' },
     { label: 'Sovereign Industry Solutions', path: '/solutions' },
-    { label: 'Products', path: '/products' },
-    { label: 'Compliance Services', path: '/compliance' },
-    { label: 'Industries', path: '/industries' } // ✅ new item
+    { label: 'Industries', path: '/industries' },
+    { label: 'Contact Us', path: '/contact' },
+    { label: 'Open Account', path: '/open-account' },
+    { label: 'Login', path: '/login' }
   ];
 
   return (
-    <nav className="bg-white shadow-md py-4 px-6 flex justify-between items-center">
-      <Link to="/" className="flex items-center space-x-2">
-        <img src="/src/assets/telus-digital-logo.png" alt="Sovereign AI" className="h-8 w-auto" />
-      </Link>
-      <div className="space-x-3 flex flex-wrap justify-end">
-        {navItems.map((item) => (
-          <Link
-            key={item.path}
-            to={item.path}
-            className={`px-4 py-2 rounded text-sm font-medium transition
-              ${location.pathname === item.path
-                ? 'bg-purple-700 text-white'
-                : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-300'}`}
-          >
-            {item.label}
-          </Link>
-        ))}
-      </div>
-    </nav>
+    <div className="w-full bg-white shadow-md fixed top-0 z-30">
+      <nav className="max-w-7xl mx-auto flex justify-between items-center h-16 px-6">
+        <Link to="/" className="flex items-center space-x-2 min-w-[200px]">
+          <img src="/src/assets/telus-digital-logo.png" alt="Sovereign AI" className="h-8 w-auto" />
+        </Link>
+        <div className="flex flex-wrap justify-end gap-2">
+          {navItems.map((item) => (
+            <Link
+              key={item.path}
+              to={item.path}
+              className={`px-4 py-2 w-[140px] text-center rounded text-sm font-medium transition
+                ${location.pathname === item.path
+                  ? 'bg-purple-700 text-white border border-purple-700'
+                  : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-100'}`}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </div>
+      </nav>
+      <div className="h-20" /> {/* spacer to offset fixed navbar */}
+    </div>
   );
 }

@@ -71,6 +71,5 @@ export default function App() {
 	<Route path="/industries/travel/canada" element={<TravelCanada />} />
 	<Route path="/industries/utilities/canada" element={<UtilitiesCanada />} />
       </Routes>
-    </Router>
   );
 }

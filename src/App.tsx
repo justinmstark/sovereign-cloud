@@ -1,8 +1,12 @@
-// src/App.tsx
+import { Routes, Route } from 'react-router-dom';
+import TabbedHomepage from './pages/TabbedHomepage';
+
 export default function App() {
   return (
-    <div style={{ padding: '2rem', fontSize: '1.5rem' }}>
-      ✅ React App is LIVE and Routing Works!
-    </div>
+    <Routes>
+      <Route path="/" element={<TabbedHomepage />} />
+      {/* 👇 Add this explicitly */}
+      <Route index element={<TabbedHomepage />} />
+    </Routes>
   );
 }

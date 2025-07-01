@@ -35,7 +35,6 @@ import UtilitiesCanada from './pages/UtilitiesCanada';
 
 export default function App() {
   return (
-    <Router basename="/sovereign-cloud">
       <Routes>
         <Route path="/" element={<TabbedHomepage />} />
         <Route path="/solutions" element={<Layout><Solutions /></Layout>} />

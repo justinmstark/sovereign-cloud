@@ -1,5 +1,5 @@
 // src/App.tsx
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import TabbedHomepage from './pages/TabbedHomepage';
 import Solutions from './pages/Solutions';
@@ -35,41 +35,41 @@ import UtilitiesCanada from './pages/UtilitiesCanada';
 
 export default function App() {
   return (
-      <Routes>
-        <Route path="/" element={<TabbedHomepage />} />
-        <Route path="/solutions" element={<Layout><Solutions /></Layout>} />
-        <Route path="/products" element={<Layout><Products /></Layout>} />
-        <Route path="/compliance" element={<Layout><Compliance /></Layout>} />
-        <Route path="/capabilities" element={<Layout><Capabilities /></Layout>} />
-        <Route path="/industries" element={<Layout><Industries /></Layout>} />
-        <Route path="/services" element={<Layout><ServiceDetail /></Layout>} />
-        <Route path="/services/:id" element={<Layout><ServiceDetail /></Layout>} />
-        <Route path="/services/gpu/order" element={<Layout><OrderGPU /></Layout>} />
-        <Route path="/contact" element={<Layout><Contact /></Layout>} />
-        <Route path="/login" element={<Layout><Login /></Layout>} />
-        <Route path="/open-account" element={<Layout><OpenAccount /></Layout>} />
-	<Route path="/research" element={<Research />} />
-	<Route path="/research/:id" element={<Research />} />
-	<Route path="/industries/banking/canada" element={<Layout><BankingCanada /></Layout>} />
-	<Route path="/industries/public-sector/canada" element={<Layout><PublicSectorCanada /></Layout>} />
-	<Route path="/industries/aerospace-defence/canada" element={<AerospaceDefenceCanada />} />
-	<Route path="/industries/aerospace-defence/canada/:id" element={<AerospaceDefenceCanada />} />
-	<Route path="/industries/automotive/canada" element={<AutomotiveCanada/>} />
-	<Route path="/industries/capital-markets/canada" element={<CapitalMarketsCanada />} />
-	<Route path="/industries/chemicals/canada" element={<ChemicalsCanada />} />
-	<Route path="/industries/communications-media/canada" element={<CommunicationsMediaCanada />} />
-	<Route path="/industries/consumer-goods-services/canada" element={<ConsumerGoodsCanada />} />
-	<Route path="/industries/energy/canada" element={<EnergyCanada />} />
-	<Route path="/industries/health/canada" element={<HealthCanada />} />
-	<Route path="/industries/high-tech/canada" element={<HighTechCanada />} />
-	<Route path="/industries/industrial/canada" element={<IndustrialCanada />} />
-	<Route path="/industries/insurance/canada" element={<InsuranceCanada />} />
-	<Route path="/industries/life-sciences/canada" element={<LifeSciencesCanada />} />
-	<Route path="/industries/natural-resources/canada" element={<NaturalResourcesCanada />} />
-	<Route path="/industries/retail/canada" element={<RetailCanada />} />
-	<Route path="/industries/software-platforms/canada" element={<SoftwarePlatformsCanada />} />
-	<Route path="/industries/travel/canada" element={<TravelCanada />} />
-	<Route path="/industries/utilities/canada" element={<UtilitiesCanada />} />
-      </Routes>
+    <Routes>
+      <Route path="/" element={<TabbedHomepage />} />
+      <Route path="/solutions" element={<Layout><Solutions /></Layout>} />
+      <Route path="/products" element={<Layout><Products /></Layout>} />
+      <Route path="/compliance" element={<Layout><Compliance /></Layout>} />
+      <Route path="/capabilities" element={<Layout><Capabilities /></Layout>} />
+      <Route path="/industries" element={<Layout><Industries /></Layout>} />
+      <Route path="/services" element={<Layout><ServiceDetail /></Layout>} />
+      <Route path="/services/:id" element={<Layout><ServiceDetail /></Layout>} />
+      <Route path="/services/gpu/order" element={<Layout><OrderGPU /></Layout>} />
+      <Route path="/contact" element={<Layout><Contact /></Layout>} />
+      <Route path="/login" element={<Layout><Login /></Layout>} />
+      <Route path="/open-account" element={<Layout><OpenAccount /></Layout>} />
+      <Route path="/research" element={<Research />} />
+      <Route path="/research/:id" element={<Research />} />
+      <Route path="/industries/banking/canada" element={<Layout><BankingCanada /></Layout>} />
+      <Route path="/industries/public-sector/canada" element={<Layout><PublicSectorCanada /></Layout>} />
+      <Route path="/industries/aerospace-defence/canada" element={<AerospaceDefenceCanada />} />
+      <Route path="/industries/aerospace-defence/canada/:id" element={<AerospaceDefenceCanada />} />
+      <Route path="/industries/automotive/canada" element={<AutomotiveCanada />} />
+      <Route path="/industries/capital-markets/canada" element={<CapitalMarketsCanada />} />
+      <Route path="/industries/chemicals/canada" element={<ChemicalsCanada />} />
+      <Route path="/industries/communications-media/canada" element={<CommunicationsMediaCanada />} />
+      <Route path="/industries/consumer-goods-services/canada" element={<ConsumerGoodsCanada />} />
+      <Route path="/industries/energy/canada" element={<EnergyCanada />} />
+      <Route path="/industries/health/canada" element={<HealthCanada />} />
+      <Route path="/industries/high-tech/canada" element={<HighTechCanada />} />
+      <Route path="/industries/industrial/canada" element={<IndustrialCanada />} />
+      <Route path="/industries/insurance/canada" element={<InsuranceCanada />} />
+      <Route path="/industries/life-sciences/canada" element={<LifeSciencesCanada />} />
+      <Route path="/industries/natural-resources/canada" element={<NaturalResourcesCanada />} />
+      <Route path="/industries/retail/canada" element={<RetailCanada />} />
+      <Route path="/industries/software-platforms/canada" element={<SoftwarePlatformsCanada />} />
+      <Route path="/industries/travel/canada" element={<TravelCanada />} />
+      <Route path="/industries/utilities/canada" element={<UtilitiesCanada />} />
+    </Routes>
   );
 }
